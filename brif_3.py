@@ -8,7 +8,7 @@ import pandas as pd
 
 df = pd.read_csv('briff_3_app.csv')
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:pass@localhost:5432/alfha")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:pass@localhost:5533/alfha")
 engine = create_engine(DATABASE_URL)
  
 Base = declarative_base()

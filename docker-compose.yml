@@ -8,14 +8,14 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: alfha
     ports:
-      - "5432:5432"
+      - "5533:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
   app:
     build: .
     environment:
-      DATABASE_URL: postgresql://postgres:pass@db:5432/alfha
+      DATABASE_URL: postgresql://postgres:pass@db:5533/alfha
     depends_on:
       - db
     volumes:
